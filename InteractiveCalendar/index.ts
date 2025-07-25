@@ -1,5 +1,6 @@
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 import { HelloWorld, IHelloWorldProps } from "./HelloWorld";
+import CrmCalendar from './CalendarControl';
 import * as React from "react";
 import DataSetInterfaces = ComponentFramework.PropertyHelper.DataSetApi;
 type DataSet = ComponentFramework.PropertyTypes.DataSet;
@@ -37,7 +38,7 @@ export class InteractiveCalendar implements ComponentFramework.ReactControl<IInp
     public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
         const props: IHelloWorldProps = { name: 'Power Apps' };
         return React.createElement(
-            HelloWorld, props
+            CrmCalendar
         );
     }
 
